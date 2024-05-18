@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SAAM GYM</title>
-	<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
     <link rel="stylesheet" href="membership.css">
     <script src="https://kit.fontawesome.com/c6fbd8ef39.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </head>
+
 <body>
     <div style="padding: 10px 0; padding-left: 10px; font-size: 20px; background-color: #101492;">
         <i class="fa-solid fa-bars" onclick="navbar()" style="color: #FFF;" id="icon"></i>
@@ -18,62 +20,125 @@
         <nav>
             <ul>
                 <li><a href="index.html"><i class="fa-solid fa-house" style="color: #101492;"></i> Home</a></li>
-                <li><a href="membership.html"><i class="fa-solid fa-address-card" style="color: #101492;"></i> Memberships</a></li>
-                <li><a href="personalt.html"><i class="fa-solid fa-dumbbell" style="color: #101492;"></i> Personal Training</a></li>
+                <li><a href="membership.html"><i class="fa-solid fa-address-card" style="color: #101492;"></i>
+                        Memberships</a></li>
+                <li><a href="personalt.html"><i class="fa-solid fa-dumbbell" style="color: #101492;"></i> Personal
+                        Training</a></li>
                 <li><a href="about.html"><i class="fa-solid fa-users" style="color: #101492;"></i> About Us</a></li>
                 <li><a href="contact.html"><i class="fa-solid fa-phone" style="color: #101492;"></i> Contact Us</a></li>
             </ul>
         </nav>
     </div>
-  
-       <div class="main">
+
+    <div class="main">
         <main>
             <div class="main-1">
                 <h1>Memberships</h1>
-                <p style="text-align: center;" >
-					Here in SAAM GYM, We have three different options for membership, choose the one that seems better for you!
+                <p style="text-align: center;">
+                    Here in SAAM GYM, We have three different options for membership, choose the one that seems better
+                    for you!
                 </p>
             </div>
             <div class="main-2">
                 <div class="main-2-1">
                     <h2>BASIC</h2>
-					<h3>9.99</h3>
-                 
-                    <p>Unlitimed access to the gym and the equipment.
-					   Free personal training for a week.
-					   Access to the app and the advantages that comes with it.
+                    <div>
+                        <h5>$</h5>
+                        <h3>9</h3>
+                        <h4>.99</h4>
+                    </div>
+
+                    <p> <br>Unlitimed access to the gym and the equipment.<br>
+                        <br>Free personal training for a week.<br>
+                      <br>Access to the app and the advantages that comes with it.<br>
                     </p>
+                    <h6>PURCHASE NOW</h6>
                 </div>
                 <div class="main-2-1">
                     <h2>CLASSIC</h2>
-						<h3>14.99</h3>
-                
+                    <div>
+                        <h5>$</h5>
+                        <h3>14</h3>
+                        <h4>.99</h4>
+                    </div>
+
                     <p>
-					   Unlitimed access to the gym and the equipment.
-					   Free personal training for a month.
-					   Access to the app and the advantages that comes with it.
-					   Free acess to the massage area (one hour per day).
-					   
+                        <br>Unlitimed access to the gym and the equipment.<br>
+                        <br>Free personal training for a month.<br>
+                       <br> Access to the app and the advantages that comes with it.<br>
+                        <br>Free acess to the massage area (one hour per day).<br>
+
                     </p>
+                    <h6>PURCHASE NOW</h6>
                 </div>
                 <div class="main-2-1">
                     <h2>PREMIUM</h2>
-					<h3>24.99</h3>
-                    
-					<p>
-					   Unlitimed access to the gym and the equipment.
-					   Free personal training for a month.
-					   Access to the app and the advantages that comes with it.
-					   Free acess to the massage area (up to two hour per day).
-					   Bring a friend for free. 
+                    <div>
+                        <h5>$</h5>
+                        <h3>24</h3>
+                        <h4>.99</h4>
+                    </div>
+
+                    <p>
+                       <br> Unlitimed access to the gym and the equipment.<br>
+                     <br>   Free personal training for a month.<br>
+                      <br>  Access to the app and the advantages that comes with it.<br>
+                      <br>  Free acess to the massage area (up to two hour per day).<br>
+                    <br>    Bring a friend for free.<br>
                     </p>
+                    <h6>PURCHASE NOW</h6>
+                </div>
+            </div>
+
+            <div class="main">
+        <main>
+           
+                    <h1 style="text-align: center; color: blue; font-family: Arial, Helvetica, sans-serif;">SAAM GYM Expenses Form</h1>
+  
+  <div class="container mt-4" style="text-align: center; margin: 0 auto; width: 40%;">
+    <table >
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Quantity</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1. GYM Membership (Basic Monthly)</td>
+          <td><input type="number" value="0" class="qty" id="qty_basic" onchange="calculatePrice('basic')"/></td>
+          <td><input type="number" readonly value="0" id="price_basic"/></td>
+        </tr>
+        <tr>
+          <td>2. GYM Membership (Classic Monthly)) </td>
+          <td><input type="number" value="0" class="qty" id="qty_classic" onchange="calculatePrice('classic')"/></td>
+          <td><input type="number" readonly value="0" id="price_classic"/></td>
+        </tr>
+        <tr>
+          <td>3. GYM Membership (Premium Monthly)</td>
+          <td><input type="number" value="0" class="qty" id="qty_premium" onchange="calculatePrice('premium')"/></td>
+          <td><input type="number" readonly value="0" id="price_premium"/></td>
+        </tr>
+        <tr>
+          <td class="total">Total Expenses In SAAM GYM </td>
+          <td></td>
+          <td class="total-val"><span id="total_value">0</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script src="services_script.js"></script>
+
                 </div>
             </div>
         </main>
     </div>
 </body>
-	<footer>
-		<div class="footer-text">This Website was made by Samir Figueroa. Samir.figueroa@stu.bcc.cuny.edu
-			</div>
-	</footer>
+<footer>
+        <div class="footer-text">This Website was made by Samir Figueroa. Samir.figueroa@stu.bcc.cuny.edu
+            </div>
+    </footer>
+
 </html>

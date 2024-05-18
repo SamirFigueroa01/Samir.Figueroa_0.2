@@ -34,14 +34,44 @@
             <div class="main-1">
                <img src="dumbbells.jpg" height="100%" width="100%" class="about_bg">
                 <div class="main-2">
-                    <h2>About Us</h2>
-                    <p>
-                        In SAAM GYM, our goal is to get the best version of yourself. Our health specialist, personal
-                        trainer and every member of the staff give their best to make you feel happy and comfortable
-                        while in the gym and outside. The feeling of confidence, good health and a better understanding
-                        of your body are some of the advantages that come from working out. Try it now, see our
-                        memberships options!
-                    </p>
+                    <h1>SAAM GYM EXPENSES FORM</h1>
+  
+  <div class="container mt-4">
+    <table>
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Quantity</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1. GYM Membership (Monthly)</td>
+          <td><input type="number" value="0" class="qty" id="qty_gym" onchange="calculatePrice('gym')"/></td>
+          <td><input type="number" readonly value="0" id="price_gym"/></td>
+        </tr>
+        <tr>
+          <td>2. Personal trainers (Monthly) </td>
+          <td><input type="number" value="0" class="qty" id="qty_trainers" onchange="calculatePrice('trainers')"/></td>
+          <td><input type="number" readonly value="0" id="price_trainers"/></td>
+        </tr>
+        <tr>
+          <td>3. Annual Equipment fee</td>
+          <td><input type="number" value="0" class="qty" id="qty_equipment" onchange="calculatePrice('equipment')"/></td>
+          <td><input type="number" readonly value="0" id="price_equipment"/></td>
+        </tr>
+        <tr>
+          <td class="total">Total Expenses In SAAM GYM </td>
+          <td></td>
+          <td class="total-val"><span id="total_value">0</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script src="services_script.js"></script>
+
                 </div>
             </div>
         </main>
